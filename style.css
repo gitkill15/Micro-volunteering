@@ -1219,3 +1219,297 @@
       height: 1px;
     }
   }
+  
+  /* ===================================
+     REPORT ISSUE BUTTON
+     =================================== */
+  
+  .cta-secondary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright)) !important;
+    box-shadow: 0 8px 24px rgba(247, 184, 1, 0.3) !important;
+  }
+  
+  .cta-secondary:hover {
+    box-shadow: 0 12px 32px rgba(247, 184, 1, 0.4) !important;
+  }
+  
+  /* ===================================
+     REPORT ISSUE MODAL
+     =================================== */
+  
+  .report-modal {
+    max-width: 600px;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 2px solid var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(247, 184, 1, 0.05), rgba(255, 107, 53, 0.05));
+  }
+  
+  .modal-icon-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  .report-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(247, 184, 1, 0.3);
+  }
+  
+  .modal-header-text {
+    flex: 1;
+  }
+  
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .modal-subtitle-small {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .close-modal-btn {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-secondary);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-base);
+    flex-shrink: 0;
+  }
+  
+  .close-modal-btn:hover {
+    background: #E5E7EB;
+    color: var(--text-primary);
+    transform: rotate(90deg);
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 78, 137, 0.05), rgba(6, 214, 160, 0.05));
+    border-bottom: 1px solid var(--bg-secondary);
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+  
+  .timer-display svg {
+    color: var(--secondary);
+    animation: tickTock 2s ease-in-out infinite;
+  }
+  
+  @keyframes tickTock {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+  }
+  
+  .timer-display strong {
+    color: var(--secondary);
+    font-family: var(--font-display);
+    font-size: 1rem;
+  }
+  
+  /* Report Form */
+  .report-form {
+    padding: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  .form-label svg {
+    color: var(--primary);
+  }
+  
+  .required {
+    color: var(--primary);
+    font-weight: 800;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--bg-secondary);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: white;
+    transition: var(--transition-base);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(247, 184, 1, 0.1);
+  }
+  
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  .form-textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--bg-secondary);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: white;
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+    transition: var(--transition-base);
+  }
+  
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(247, 184, 1, 0.1);
+  }
+  
+  .form-textarea::placeholder {
+    color: var(--text-muted);
+  }
+  
+  .char-counter {
+    margin-top: 0.5rem;
+    text-align: right;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  
+  .char-counter span {
+    color: var(--text-secondary);
+    font-weight: 700;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--bg-secondary);
+  }
+  
+  .btn-secondary-modal {
+    padding: 0.875rem 1.5rem;
+    border: 2px solid var(--bg-secondary);
+    border-radius: 12px;
+    background: white;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+  }
+  
+  .btn-secondary-modal:hover {
+    border-color: var(--text-muted);
+    background: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Report Toast */
+  .report-toast {
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright)) !important;
+  }
+  
+  /* Responsive for Report Modal */
+  @media (max-width: 640px) {
+    .modal-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .close-modal-btn {
+      align-self: flex-end;
+    }
+  
+    .form-actions {
+      grid-template-columns: 1fr;
+    }
+  
+    .btn-secondary-modal {
+      order: 2;
+    }
+  
+    .report-modal {
+      max-width: 100%;
+      margin: 1rem;
+    }
+  }
+  
+  /* Character count warnings */
+  .form-input:invalid,
+  .form-textarea:invalid {
+    border-color: rgba(255, 107, 53, 0.3);
+  }
+  
+  .form-input:valid,
+  .form-textarea:valid {
+    border-color: rgba(6, 214, 160, 0.3);
+  }
+  
+  /* Focus states for accessibility */
+  .form-input:focus:invalid,
+  .form-textarea:focus:invalid {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+  }
+  
+  .form-input:focus:valid,
+  .form-textarea:focus:valid {
+    border-color: var(--success);
+    box-shadow: 0 0 0 4px rgba(6, 214, 160, 0.1);
+  }
